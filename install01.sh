@@ -36,7 +36,9 @@ if [ $ID_LIKE = "debian" ]
 then
         echo "sistema operacional compativel"
         echo "seu sistema operacional é  $ID_LIKE versao $VERSION"
-
+		echo "instalando o proxychains"
+		apt update -y && apt install proxychains -y 1> /tmp/log_apt.txt  2> /tmp/log_apt_erro.txt
+		
 #REDHAT
 elif [ $ID_LIKE = "rhel" ]
 
